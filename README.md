@@ -21,9 +21,7 @@ This repo is straight from the [Storybook](https://storybook.js.org/tutorials/in
 
     You might get some errors. Try running it before you worry about troubleshooting.
 
-###
-
-2.  **Run it**
+3.  **Run it**
 
 ```shell
 # Run storybook
