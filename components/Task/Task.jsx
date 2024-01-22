@@ -14,10 +14,10 @@ export const Task = ({
           <MaterialIcons
             name="check-box-outline-blank"
             size={24}
-            color="#26c6da"
+            color="#8000FF"
           />
         ) : (
-          <MaterialIcons name="check-box" size={24} color="#26c6da" />
+          <MaterialIcons name="check-box" size={24} color="#8000FF" />
         )}
       </TouchableOpacity>
       <TextInput
@@ -34,7 +34,7 @@ export const Task = ({
         <MaterialIcons
           name="star"
           size={24}
-          color={state !== "TASK_PINNED" ? "#eee" : "#26c6da"}
+          color={state !== "TASK_PINNED" ? "#eee" : "#8000FF"}
         />
       </TouchableOpacity>
     </View>

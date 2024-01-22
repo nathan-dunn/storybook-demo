@@ -4,21 +4,22 @@ import { LoadingRow } from "./LoadingRow";
 import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from "./TaskList.styles";
 import { useDispatch, useSelector } from "react-redux";
-import { createSelector } from "@reduxjs/toolkit";
 import { updateTaskState } from "../../store";
 
 export const TaskList = () => {
-  // use createSelector to memoize the result of the selector
-  const taskSelector = createSelector(
-    (state) => state.taskbox.tasks,
-    (tasks) =>
-      tasks.filter((t) => t.state === "TASK_INBOX" || t.state === "TASK_PINNED")
-  );
-
   // We're retrieving our state from the store
-  const tasks = useSelector(taskSelector);
+  const tasks = useSelector((state) => {
+    const tasksInOrder = [
+      ...state.taskbox.tasks.filter((t) => t.state === "TASK_PINNED"),
+      ...state.taskbox.tasks.filter((t) => t.state !== "TASK_PINNED"),
+    ];
+    const filteredTasks = tasksInOrder.filter(
+      (t) => t.state === "TASK_INBOX" || t.state === "TASK_PINNED"
+    );
+    return filteredTasks;
+  });
 
-  const { status } = useSelector(taskSelector);
+  const { status } = useSelector((state) => state.taskbox);
 
   const dispatch = useDispatch();
 
