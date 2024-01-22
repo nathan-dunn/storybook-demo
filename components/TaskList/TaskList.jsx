@@ -8,19 +8,17 @@ import { createSelector } from "@reduxjs/toolkit";
 import { updateTaskState } from "../../store";
 
 export const TaskList = () => {
-  // We're retrieving our state from the store
-  const tasks = useSelector((state) => {
-    const tasksInOrder = [
-      ...state.taskbox.tasks.filter((t) => t.state === "TASK_PINNED"),
-      ...state.taskbox.tasks.filter((t) => t.state !== "TASK_PINNED"),
-    ];
-    const filteredTasks = tasksInOrder.filter(
-      (t) => t.state === "TASK_INBOX" || t.state === "TASK_PINNED"
-    );
-    return filteredTasks;
-  });
+  // use createSelector to memoize the result of the selector
+  const taskSelector = createSelector(
+    (state) => state.taskbox.tasks,
+    (tasks) =>
+      tasks.filter((t) => t.state === "TASK_INBOX" || t.state === "TASK_PINNED")
+  );
 
-  const { status } = useSelector((state) => state.taskbox);
+  // We're retrieving our state from the store
+  const tasks = useSelector(taskSelector);
+
+  const { status } = useSelector(taskSelector);
 
   const dispatch = useDispatch();
 
