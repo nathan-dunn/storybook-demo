@@ -16,7 +16,7 @@ This repo is straight from the [Storybook](https://storybook.js.org/tutorials/in
     cd storybook-demo
 
     # Install the dependencies
-    yarn
+    yarn install
     ```
 
     <p>You might get some errors. Try running it before you worry about troubleshooting.</p><br>
