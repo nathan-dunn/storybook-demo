@@ -1,4 +1,4 @@
-This repo is straight from the [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react-native/en/get-started/) template for React Native with a few tweaks to the folder structure and I memoized the redux selectors.
+This repo is straight from the [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react-native/en/get-started/) template for React Native with a few tweaks.
 
 ## 🚀 Quick start
 
