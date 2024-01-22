@@ -19,7 +19,7 @@ This repo is straight from the [Storybook](https://storybook.js.org/tutorials/in
     yarn
     ```
 
-    You might get some errors. Try running it before you worry about troubleshooting.
+    <p>You might get some errors. Try running it before you worry about troubleshooting.</p><br>
 
 3.  **Run it**
 
