@@ -23,17 +23,17 @@ This repo is straight from the [Storybook](https://storybook.js.org/tutorials/in
 
 3.  **Run it**
 
-```shell
-# Run storybook
-yarn storybook:ios
-```
+    ```shell
+    # Run storybook
+    yarn storybook:ios
+    ```
 
 or
 
-```shell
-# Run the app (spoiler alert: there is nothing to see here)
-yarn ios
-```
+    ```shell
+    # Run the app (spoiler alert: there is nothing to see here)
+    yarn ios
+    ```
 
 #### 🗒️ Note
 
